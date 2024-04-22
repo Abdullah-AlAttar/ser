@@ -31,9 +31,10 @@ endif()
 
 # Link with Raylib
 CPMAddPackage(NAME raylib 
-    GITHUB_REPOSITORY raysan5/raylib 
-    GIT_TAG 5.0 
+    NAME raylib
+    URL https://github.com/raysan5/raylib/archive/refs/tags/5.0.zip
     OPTIONS "PLATFORM ${PLATFORM}" "CMAKE_BUILD_TYPE MinSizeRel"
+
 )
 
 target_include_directories(raylib_main PRIVATE ${raylib_SOURCE_DIR}/src src)
